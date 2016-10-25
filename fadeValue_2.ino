@@ -15,9 +15,8 @@ void loop() {
     int r = map(fadeValue, 0, 255, 255, 0);
 
     analogWrite(6, fadeValue);
-    delay(100);
     analogWrite(9, r);
-    delay(100);
+    delay(100);// only one delay after the action we want to program!! if it is between, it will effect the transition of the light intensity (from 0 to 100%)
   }
 
 
@@ -25,7 +24,6 @@ void loop() {
     int r = map(fadeValue, 0, 255, 255, 0);
 
     analogWrite(6, r);
-    delay(100);
     analogWrite(10, fadeValue);
     delay(100);
   }
@@ -34,7 +32,6 @@ void loop() {
     int r = map(fadeValue, 0, 255, 255, 0);
 
     analogWrite(10, r);
-    delay(100);
     analogWrite(11, fadeValue);
     delay(100);
   }
@@ -43,7 +40,6 @@ void loop() {
     int r = map(fadeValue, 0, 255, 255, 0);
 
     analogWrite(11, r);
-    delay(100);
     analogWrite(9, fadeValue);
     delay(100);
   }
